@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=2.01
+Name=END ROLL
+Comment=
+Type=Application
+Exec=ENDROLL
+Categories=Game;AdventureGame;
+Terminal=false
+StartupWMClass=EasyRPG Player
