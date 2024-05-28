@@ -24,7 +24,7 @@ package() {
 		mv '- On Bonus Content' "$pkgdir/usr/share/doc/ENDROLL"
 		printf 'Note: the "How to Start" section is not relevant when using the endroll-en package.\n\n' > "$pkgdir/usr/share/doc/ENDROLL/'- END ROLL Readme'"
 		cat '- END ROLL Readme' >> "$pkgdir/usr/share/doc/ENDROLL/'- END ROLL Readme'"
-		rm -v !("Data")
+		rm '- END ROLL Readme' '- Game Hints' '- On Bonus Content' StartFullscreen.exe StartWindowed.exe
 		mv 'Data'/* .
 	)
 
