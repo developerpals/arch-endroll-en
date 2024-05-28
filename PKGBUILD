@@ -13,7 +13,7 @@ source=("https://vgperson.com/games/EndRoll201.zip"
         'ENDROLL.desktop')
 sha512sums=(''
 	    '66ef5da71a55fa15a8594948855c8d0ece7198cb6c4728d521823120c9e46b4ba7bbf52ceb63928b2af197c567de8550cc54b37108e75d9ad59b541d33aa2d35'
-     	    '')
+     	    '143f209f25bb4ff21ff59d67102f8030a318e15a2dcd4e0c4e1235ec305d6a12317a8e360de52a1bbda9ad197341b0d3468399b69b502d8d6369a50db00a82a1')
 
 package() {
 	(
