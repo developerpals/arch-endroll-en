@@ -1,0 +1,33 @@
+# This PKGBUILD is for my personal system, and will not be mantained.
+
+pkgname=endroll-en
+pkgver=2.01
+pkgrel=1
+pkgdesc='A regretful adventure RPG (English translation by vgperson)'
+url='https://vgperson.com/games/endroll.htm'
+arch=('any')
+license=('Freeware')
+depends=('easyrpg-player')
+source=("https://vgperson.com/games/EndRoll201.zip"
+        'ENDROLL'
+        'ENDROLL.desktop')
+sha512sums=()
+
+package() {
+	(
+		cd 'EndRoll201'
+
+		mkdir -p "$pkgdir/usr/share/doc/ENDROLL"
+		mv '- Game Hints' "$pkgdir/usr/share/doc/ENDROLL"
+		mv '- On Bonus Content' "$pkgdir/usr/share/doc/ENDROLL"
+		printf 'Note: the "How to Start" section is not relevant when using the endroll-en package.\n\n' > "$pkgdir/usr/share/doc/ENDROLL/'- END ROLL Readme'"
+		cat '- END ROLL Readme' >> "$pkgdir/usr/share/doc/ENDROLL/'- END ROLL Readme'"
+		rm -v !("Data")
+		mv "Data"/* .
+	)
+
+	install -Dm755 ENDROLL -t "$pkgdir/usr/bin"
+	install -Dm644 ENDROLL.desktop -t "$pkgdir/usr/share/applications
+	mkdir -p "$pkgdir/usr/lib/ENDROLL"
+	mv 'EndRoll201' "$pkgdir/usr/lib/ENDROLL"
+}
