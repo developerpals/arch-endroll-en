@@ -30,6 +30,6 @@ package() {
 
 	install -Dm755 ENDROLL -t "$pkgdir/usr/bin"
 	install -Dm644 ENDROLL.desktop -t "$pkgdir/usr/share/applications"
-	mkdir -p "$pkgdir/usr/lib/ENDROLL"
+	mkdir -p "$pkgdir/usr/lib"
 	mv 'EndRoll201' "$pkgdir/usr/lib/ENDROLL"
 }
