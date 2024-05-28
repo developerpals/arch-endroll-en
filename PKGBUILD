@@ -12,8 +12,8 @@ source=("https://vgperson.com/games/EndRoll201.zip"
         'ENDROLL'
         'ENDROLL.desktop')
 sha512sums=('c6119ea35a5d73ad1d0dde31b45660f566837c35c786b415bb18c47a4d0594e455b1b684007a53276419ac658c99ed937ec9e68c177ffde7c2b9935379851826'
-	    '66ef5da71a55fa15a8594948855c8d0ece7198cb6c4728d521823120c9e46b4ba7bbf52ceb63928b2af197c567de8550cc54b37108e75d9ad59b541d33aa2d35'
-     	    '143f209f25bb4ff21ff59d67102f8030a318e15a2dcd4e0c4e1235ec305d6a12317a8e360de52a1bbda9ad197341b0d3468399b69b502d8d6369a50db00a82a1')
+	'66ef5da71a55fa15a8594948855c8d0ece7198cb6c4728d521823120c9e46b4ba7bbf52ceb63928b2af197c567de8550cc54b37108e75d9ad59b541d33aa2d35'
+ 	'143f209f25bb4ff21ff59d67102f8030a318e15a2dcd4e0c4e1235ec305d6a12317a8e360de52a1bbda9ad197341b0d3468399b69b502d8d6369a50db00a82a1')
 
 package() {
 	(
@@ -24,7 +24,7 @@ package() {
 		mv '- On Bonus Content' "$pkgdir/usr/share/doc/ENDROLL"
 		printf 'Note: the "How to Start" section is not relevant when using the endroll-en package.\n\n' > "$pkgdir/usr/share/doc/ENDROLL/'- END ROLL Readme'"
 		cat '- END ROLL Readme' >> "$pkgdir/usr/share/doc/ENDROLL/'- END ROLL Readme'"
-		rm -v !('Data')
+		rm -v !("Data")
 		mv 'Data'/* .
 	)
 
