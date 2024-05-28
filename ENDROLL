@@ -1,5 +1,5 @@
 #!/bin/sh
 
-save_path="${XDG_DATA_HOME:-$HOME/.local/share}/ENDROLL
+save_path="${XDG_DATA_HOME:-$HOME/.local/share}/ENDROLL"
 mkdir -p "$save_path"
 easyrpgplayer --save-path "$save_path" --project-path /usr/lib/ENDROLL
